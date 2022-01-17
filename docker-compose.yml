@@ -6,7 +6,7 @@ services:
     build:
       context: ./
       target: development
-    image: ripley-svc-base
+    image: base-clean-architecture
     working_dir: /app
     command: npm run start:dev:full
     restart: always

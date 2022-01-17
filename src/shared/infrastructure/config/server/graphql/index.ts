@@ -22,6 +22,6 @@ export class Graphql {
             path: `/graphql/${CONTEXT_APP}`,
             app,
           });
-      });;
+      });
   }
 }
