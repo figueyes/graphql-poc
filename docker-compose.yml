@@ -1,0 +1,21 @@
+version: '3.6'
+services:
+  node:
+    env_file:
+    - .env
+    build:
+      context: ./
+      target: development
+    image: ripley-svc-base
+    working_dir: /app
+    command: npm run start:dev:full
+    restart: always
+    networks:
+      - web
+    volumes:
+      - ./:/app
+    ports:
+      - "3000:3000"
+
+networks:
+  web:

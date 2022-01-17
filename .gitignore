@@ -1,0 +1,10 @@
+node_modules
+dist
+.env
+yarn-error.log
+.idea/
+.run/
+coverage/
+*.lcov
+test-report.xml
+globalConfig.json
