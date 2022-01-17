@@ -26,3 +26,15 @@ docker-compose up
 ```
 docker-compose -f docker-compose.yml up -d --build
 ```
+
+### Workflow
+
+#### Rest access (GET | POST)
+```
+http://localhost:${PORT}/${BASE_PATH}/foo
+```
+
+#### Graphql (POST)
+```
+http://localhost:${PORT}/graphql/foo
+```
