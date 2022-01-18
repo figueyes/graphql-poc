@@ -3,7 +3,7 @@ import {
   HttpResponse,
   ok,
   serverError,
-} from '../../../../shared/infrastructure/config/types/http-response';
+} from '../../../../shared/infrastructure/http/http-response';
 import { Foo } from '../../../domain/entities/Foo';
 import { IAddUseCase } from '../../../application/usecases/interfaces/IAddUseCase';
 

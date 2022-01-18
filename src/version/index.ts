@@ -3,7 +3,7 @@ import {
   HttpResponse,
   ok,
   serverError,
-} from '../shared/infrastructure/config/types/http-response';
+} from '../shared/infrastructure/http/http-response';
 import { name, version, author } from '../../package.json';
 
 export class VersionHealth implements IBaseController {
