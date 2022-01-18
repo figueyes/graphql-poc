@@ -1,6 +1,2 @@
-export class ErrorUseCase extends Error {
-  constructor() {
-    super('Error calling repository');
-    this.name = 'ErrorUseCase';
-  }
-}
+export * from './ErrorRepository';
+export * from './ErrorUseCase';

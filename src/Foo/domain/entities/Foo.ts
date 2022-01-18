@@ -6,6 +6,6 @@ export interface Foo {
 }
 
 interface Baz {
-  name :string;
+  name: string;
   street: string;
 }

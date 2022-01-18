@@ -1,10 +1,5 @@
 import { Logger, createLogger, format, transports } from 'winston';
 
-declare global {
-  function initializer(): Logger;
-  var log: Logger;
-}
-
 export class WinstonLogger {
   private readonly log: Logger;
 

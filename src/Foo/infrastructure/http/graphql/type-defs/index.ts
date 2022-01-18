@@ -31,4 +31,4 @@ export default gql`
     name: String!
     street: String
   }
-`
+`;

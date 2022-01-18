@@ -1,5 +1,5 @@
-import {Foo} from "../../../domain/entities/Foo";
+import { Foo } from '../../../domain/entities/Foo';
 
 export interface ILoadUseCase {
-  load: () => Promise<Foo[]>
+  load: () => Promise<Foo[]>;
 }

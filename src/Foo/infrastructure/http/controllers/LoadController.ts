@@ -1,11 +1,13 @@
-import { IBaseController } from "../../../../shared/infrastructure/http/controllers/IBaseController";
-import { HttpResponse, ok, serverError } from "../../../../shared/infrastructure/http/types/http-response";
-import { Foo } from "../../../domain/entities/Foo";
-import { ILoadUseCase } from "../../../application/usecases/interfaces/ILoadUseCase";
-import {Request} from "express";
+import { IBaseController } from '../../../../shared/infrastructure/http/controllers/IBaseController';
+import {
+  HttpResponse,
+  ok,
+  serverError,
+} from '../../../../shared/infrastructure/config/types/http-response';
+import { Foo } from '../../../domain/entities/Foo';
+import { ILoadUseCase } from '../../../application/usecases/interfaces/ILoadUseCase';
 
 export class LoadController implements IBaseController {
-
   private useCase: ILoadUseCase;
 
   constructor(useCase: ILoadUseCase) {
@@ -19,5 +21,5 @@ export class LoadController implements IBaseController {
     } catch (e) {
       return serverError(e as Error);
     }
-  }
+  };
 }

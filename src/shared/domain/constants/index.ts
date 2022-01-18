@@ -1,1 +1,1 @@
-export const CONTEXT_APP = 'foo'
+export const CONTEXT_APP = 'foo';

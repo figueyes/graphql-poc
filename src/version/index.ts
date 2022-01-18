@@ -1,5 +1,9 @@
 import { IBaseController } from '../shared/infrastructure/http/controllers/IBaseController';
-import {HttpResponse, ok, serverError} from "../shared/infrastructure/http/types/http-response";
+import {
+  HttpResponse,
+  ok,
+  serverError,
+} from '../shared/infrastructure/config/types/http-response';
 import { name, version, author } from '../../package.json';
 
 export class VersionHealth implements IBaseController {
@@ -18,6 +22,4 @@ export class VersionHealth implements IBaseController {
   };
 }
 
-export const makeVersionHealth = () => {
-  return new VersionHealth();
-}
+export const makeVersionHealth = (): IBaseController => new VersionHealth();

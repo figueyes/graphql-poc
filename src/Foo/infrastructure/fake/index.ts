@@ -1,6 +1,7 @@
-import {IRead} from "../../../shared/domain/repositories/IRead";
-import {Foo} from "../../domain/entities/Foo";
-import {IWrite} from "../../../shared/domain/repositories/IWrite";
+import { IRead } from '../../../shared/domain/repositories/IRead';
+import { Foo } from '../../domain/entities/Foo';
+import { IWrite } from '../../../shared/domain/repositories/IWrite';
+import { ErrorRepository } from '../../domain/errors';
 
 const fooArray: Foo[] = [
   {
@@ -9,7 +10,7 @@ const fooArray: Foo[] = [
     order: 1,
     baz: {
       name: 'baz',
-      street: 'traslavina 449'
+      street: 'traslavina 449',
     },
   },
   {
@@ -20,18 +21,20 @@ const fooArray: Foo[] = [
       name: 'baz advanced',
       street: '6 norte 1004',
     },
-  }
-]
+  },
+];
 
 export class FooFakeRepository implements IRead<Foo>, IWrite<Foo> {
-
   get(): Promise<Foo[]> {
-    return Promise.resolve(fooArray);
+    try {
+      return Promise.resolve(fooArray);
+    } catch (e) {
+      throw new ErrorRepository();
+    }
   }
 
   add(entity: Foo): Promise<Foo> {
     fooArray.push(entity);
     return Promise.resolve(entity);
   }
-
 }

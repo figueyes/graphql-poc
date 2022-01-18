@@ -1,3 +1,3 @@
 export interface IRead<T> {
-  get: () => Promise<T[]>
+  get: () => Promise<T[]>;
 }

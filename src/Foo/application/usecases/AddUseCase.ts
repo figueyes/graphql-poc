@@ -1,7 +1,7 @@
-import {IAddUseCase} from "./interfaces/IAddUseCase";
-import {Foo} from "../../domain/entities/Foo";
-import {IFooRepository} from "../../domain/repositories/IFooRepository";
-import {ErrorUseCase} from "../../domain/errors";
+import { IAddUseCase } from './interfaces/IAddUseCase';
+import { Foo } from '../../domain/entities/Foo';
+import { IFooRepository } from '../../domain/repositories/IFooRepository';
+import { ErrorUseCase } from '../../domain/errors';
 
 export class AddUseCase implements IAddUseCase {
   private repository: IFooRepository;
@@ -16,6 +16,5 @@ export class AddUseCase implements IAddUseCase {
     } catch (e) {
       throw new ErrorUseCase();
     }
-  }
-
+  };
 }
