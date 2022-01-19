@@ -2,8 +2,7 @@ import { Request, RequestHandler, Response } from 'express';
 import { IBaseController } from '../controllers/IBaseController';
 
 export const run =
-  (controller: IBaseController): RequestHandler =>
-  async (req: Request, res: Response) => {
+  (controller: IBaseController): RequestHandler => async (req: Request, res: Response) => {
     const request = {
       ...(req.body || {}),
       ...(req.params || {}),

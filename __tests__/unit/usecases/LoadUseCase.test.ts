@@ -1,6 +1,6 @@
-import { FooFakeRepository } from "../../../src/Foo/infrastructure/fake";
-import { LoadUseCase } from "../../../src/Foo/application/usecases/LoadUseCase";
-import {ErrorRepository, ErrorUseCase} from "../../../src/Foo/domain/errors";
+import { FooFakeRepository } from "../../../src/foos/infrastructure/fake";
+import { LoadUseCase } from "../../../src/foos/application/usecases/LoadUseCase";
+import {ErrorRepository, ErrorUseCase} from "../../../src/foos/domain/errors";
 
 describe('Load foos use case', function () {
   const repository = new FooFakeRepository();

@@ -1,6 +1,6 @@
 import { Router } from 'express';
 import { run } from '../../../http/adapters/rest';
-import factories from '../../../../../Foo/infrastructure/http/factories';
+import factories from '../../../../../foos/infrastructure/http/factories';
 import { makeVersionHealth } from '../../../../../version';
 
 export class Routes {

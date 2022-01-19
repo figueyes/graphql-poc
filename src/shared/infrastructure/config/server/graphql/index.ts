@@ -1,6 +1,6 @@
 import { Application } from 'express';
 import { ApolloServer } from 'apollo-server-express';
-import resolvers from '../../../../../Foo/infrastructure/http/graphql/resolvers/Foo';
+import resolvers from '../../../../../foos/infrastructure/http/graphql/resolvers/Foo';
 import typeDefs from '../../../http/graphql/type-defs';
 import { CONTEXT_APP } from '../../../../domain/constants';
 
