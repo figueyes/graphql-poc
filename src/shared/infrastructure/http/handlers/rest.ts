@@ -1,8 +1,8 @@
 import { Request, RequestHandler, Response } from 'express';
-import { IBaseController } from '../controllers/IBaseController';
+import { IController } from '../../../contracts/IController';
 
 export const run =
-  (controller: IBaseController): RequestHandler => async (req: Request, res: Response) => {
+  (controller: IController): RequestHandler => async (req: Request, res: Response) => {
     const request = {
       ...(req.body || {}),
       ...(req.params || {}),

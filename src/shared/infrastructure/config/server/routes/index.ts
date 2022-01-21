@@ -1,5 +1,5 @@
 import { Router } from 'express';
-import { run } from '../../../http/adapters/rest';
+import { run } from '../../../http/handlers/rest';
 import factories from '../../../../../foos/infrastructure/http/factories';
 import { makeVersionHealth } from '../../../../../version';
 

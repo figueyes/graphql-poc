@@ -1,4 +1,4 @@
-import { IBaseController } from '../shared/infrastructure/http/controllers/IBaseController';
+import { IController } from '../shared/contracts/IController';
 import {
   HttpResponse,
   ok,
@@ -6,7 +6,7 @@ import {
 } from '../shared/infrastructure/http/http-response';
 import { name, version, author } from '../../package.json';
 
-export class VersionHealth implements IBaseController {
+export class VersionHealth implements IController {
   handle = async (): Promise<HttpResponse> => {
     try {
       const versionApp = {
@@ -22,4 +22,4 @@ export class VersionHealth implements IBaseController {
   };
 }
 
-export const makeVersionHealth = (): IBaseController => new VersionHealth();
+export const makeVersionHealth = (): IController => new VersionHealth();

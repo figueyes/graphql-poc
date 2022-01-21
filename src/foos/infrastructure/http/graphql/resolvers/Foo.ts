@@ -1,9 +1,9 @@
-import { resolve } from '../../../../../shared/infrastructure/http/adapters/resolvers';
+import { resolve } from '../../../../../shared/infrastructure/http/handlers/resolvers';
 import factories from '../../factories';
 import { Foo } from '../../../../domain/entities/Foo';
 import { StarWar } from '../../../../../shared/infrastructure/http/clients/api/starwars';
 
-export default {
+export const fooResolver = {
   Query: {
     load: async (): Promise<Array<Foo>> => resolve(factories.makeLoadController()),
     starWars: async (): Promise<string[]> => StarWar.getInstance().listTitleFilms(),

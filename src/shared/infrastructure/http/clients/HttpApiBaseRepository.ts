@@ -1,7 +1,7 @@
 import axios, { AxiosResponse } from 'axios';
-import { IApiClient } from '../../../domain/repositories/IApiClient';
+import { IPost } from '../../../contracts/IApiClient';
 
-export class HttpApiBaseRepository implements IApiClient {
+export class HttpApiBaseRepository implements IPost {
   post<T, V>(url: string, body: T, token = '', type = ''): Promise<any> {
     let headers: Record<string, string>;
     switch (type) {
@@ -14,7 +14,7 @@ export class HttpApiBaseRepository implements IApiClient {
 
     return axios
       .post(url, body, { headers })
-      .then((response: AxiosResponse<unknown>) => {
+      .then((response: AxiosResponse<V>) => {
         const { status, data } = response;
         if (status === 200) {
           return data;

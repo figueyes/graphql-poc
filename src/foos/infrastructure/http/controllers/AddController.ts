@@ -1,4 +1,4 @@
-import { IBaseController } from '../../../../shared/infrastructure/http/controllers/IBaseController';
+import { IController } from '../../../../shared/contracts/IController';
 import {
   HttpResponse,
   ok,
@@ -7,7 +7,7 @@ import {
 import { Foo } from '../../../domain/entities/Foo';
 import { IAddUseCase } from '../../../application/usecases/interfaces/IAddUseCase';
 
-export class AddController implements IBaseController {
+export class AddController implements IController {
   private useCase: IAddUseCase;
 
   constructor(useCase: IAddUseCase) {

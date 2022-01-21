@@ -1,7 +1,7 @@
-import { IBaseController } from '../controllers/IBaseController';
+import { IController } from '../../../contracts/IController';
 
 export const resolve = async (
-  controller: IBaseController,
+  controller: IController,
   args?: any,
 ): Promise<any> => {
   const request = { ...(args || {}) };
